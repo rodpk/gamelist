@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  gamelist-db:
+    image: postgres
+    container_name: gamelist-db
+    restart: always
+    environment:
+      - POSTGRES_DB=gamelist_db
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - 5432:5432
